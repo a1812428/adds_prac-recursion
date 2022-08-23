@@ -1,7 +1,7 @@
 #include "EfficientTruckloads.h"
 using namespace std;
 
-int EfficientTruckloads::dp[10000][10000] = {0};
+int EfficientTruckloads::dp[10005][10005] = {0};
 
 int EfficientTruckloads::numTrucks(int numcrates, int loadSize)
 {
