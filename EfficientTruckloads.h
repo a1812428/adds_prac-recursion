@@ -4,7 +4,7 @@
 class EfficientTruckloads
 {
 public:
-    int dp[10000][10000];
+    int dp[10000][10000] = {0};
     int numTrucks(int numcrates, int loadSize);
 };
 
