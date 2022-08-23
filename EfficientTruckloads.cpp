@@ -7,6 +7,9 @@ int EfficientTruckloads::numTrucks(int numcrates, int loadSize)
 {
     try
     {
+        if(numcrates <=0 || loadSize <=0){
+            return -1;
+        }
         if (numcrates <= loadSize)
         {
             return 1;
