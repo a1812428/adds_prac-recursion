@@ -18,7 +18,6 @@ int main()
     else
     {
         ans1 = -1;
-        cout << "Hello";
     }
     string str;
     if (cin >> str)
