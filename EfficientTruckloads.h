@@ -4,7 +4,7 @@
 class EfficientTruckloads
 {
 public:
-    static int dp[10000][10000];
+    static int dp[10005][10005];
     int numTrucks(int numcrates, int loadSize);
 };
 
