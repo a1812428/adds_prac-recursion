@@ -3,9 +3,20 @@ using namespace std;
 
 int Truckloads::numTrucks(int numcrates, int loadSize)
 {
-    if (numcrates <= loadSize)
+    try
     {
-        return 1;
+        if (numcrates <= loadSize)
+        {
+            return 1;
+        }
+        return (numTrucks(numcrates / 2, loadSize) + numTrucks((numcrates + 1) / 2, loadSize));
     }
-    return (numTrucks(numcrates / 2, loadSize) + numTrucks((numcrates + 1) / 2, loadSize));
+    catch (char *excp)
+    {
+        return -1;
+    }
+    catch (...)
+    {
+        return -1;
+    }
 }
