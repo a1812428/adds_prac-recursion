@@ -1,54 +1,59 @@
 #include "Reverse.h"
 #include "Truckloads.h"
 #include "EfficientTruckloads.h"
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    int ans1, ans3 = -1, ans4 = -1;
+    int ans1, ans3 = 0, ans4 = 0;
     string ans2;
     Reverse *r = new Reverse();
     Truckloads *t = new Truckloads();
     EfficientTruckloads *truck = new EfficientTruckloads();
     int num;
-    if (cin >> num)
+    if (!(cin >> num))
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        ans1 = -1;
+    }
+    else
     {
         ans1 = r->reverseDigit(num);
     }
-    else
-    {
-        ans1 = -1;
-    }
     string str;
-    if (cin >> str)
+    if (!(cin >> str))
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        ans2 = "ERROR";
+    }
+    else
     {
         ans2 = r->reverseString(str);
     }
-    else
-    {
-        ans2 = "ERROR";
-    }
     int numCrates;
     int loadSize;
-    if (cin >> numCrates)
+    if (!(cin >> numCrates))
     {
-    }
-    else
-    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         ans3 = -1;
         ans4 = -1;
     }
-    if (cin >> loadSize)
+    if (!(cin >> loadSize))
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        ans3 = -1;
+        ans4 = -1;
+    }
+    if (!(ans3 == -1 || ans4 == -1))
     {
         ans3 = t->numTrucks(numCrates, loadSize);
         ans4 = truck->numTrucks(numCrates, loadSize);
     }
-    else
-    {
-        ans3 = -1;
-        ans4 = -1;
-    }
-
     cout << ans1 << " " << ans2 << " ";
     if (ans3 == -1)
     {
