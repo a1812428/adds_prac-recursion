@@ -8,7 +8,7 @@ int Truckloads::numTrucks(int numcrates, int loadSize)
     {
         if (numcrates <= 0 || loadSize <= 0)
         {
-            return -1;
+            return 0;
         }
         if (numcrates <= loadSize)
         {
@@ -18,27 +18,10 @@ int Truckloads::numTrucks(int numcrates, int loadSize)
     }
     catch (char *excp)
     {
-        cout << "ERROR";
-        return -1;
+        return 0;
     }
     catch (...)
     {
-        cout << "ERROR";
-        return -1;
+        return 0;
     }
-}
-
-string Truckloads::numTrucks(string numcrates, int loadSize)
-{
-    return "ERROR";
-}
-
-string Truckloads::numTrucks(int numcrates, string loadSize)
-{
-    return "ERROR";
-}
-
-string Truckloads::numTrucks(string numcrates, string loadSize)
-{
-    return "ERROR";
 }
