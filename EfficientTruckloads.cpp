@@ -10,7 +10,7 @@ int EfficientTruckloads::numTrucks(int numcrates, int loadSize)
     {
         if (numcrates <= 0 || loadSize <= 0)
         {
-            return -1;
+            return 0;
         }
         if (numcrates <= loadSize)
         {
@@ -24,10 +24,10 @@ int EfficientTruckloads::numTrucks(int numcrates, int loadSize)
     }
     catch (char *excp)
     {
-        return -1;
+        return 0;
     }
     catch (...)
     {
-        return -1;
+        return 0;
     }
 }
