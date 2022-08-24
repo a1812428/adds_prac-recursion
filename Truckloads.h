@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 #ifndef TRUCKLOADS_H
 #define TRUCKLOADS_H
 
