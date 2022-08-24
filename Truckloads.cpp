@@ -1,4 +1,5 @@
 #include "Truckloads.h"
+#include<iostream>
 using namespace std;
 
 int Truckloads::numTrucks(int numcrates, int loadSize)
@@ -17,10 +18,12 @@ int Truckloads::numTrucks(int numcrates, int loadSize)
     }
     catch (char *excp)
     {
+        cout << "ERROR";
         return -1;
     }
     catch (...)
     {
+        cout << "ERROR";
         return -1;
     }
 }

@@ -1,4 +1,5 @@
 #include "EfficientTruckloads.h"
+#include <iostream>
 using namespace std;
 
 int EfficientTruckloads::dp[10005][10005] = {0};
@@ -7,7 +8,8 @@ int EfficientTruckloads::numTrucks(int numcrates, int loadSize)
 {
     try
     {
-        if(numcrates <=0 || loadSize <=0){
+        if (numcrates <= 0 || loadSize <= 0)
+        {
             return -1;
         }
         if (numcrates <= loadSize)
@@ -22,10 +24,12 @@ int EfficientTruckloads::numTrucks(int numcrates, int loadSize)
     }
     catch (char *excp)
     {
+        cout << "ERROR";
         return -1;
     }
     catch (...)
     {
+        cout << "ERROR";
         return -1;
     }
 }
