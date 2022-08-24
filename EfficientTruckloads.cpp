@@ -24,12 +24,10 @@ int EfficientTruckloads::numTrucks(int numcrates, int loadSize)
     }
     catch (char *excp)
     {
-        cout << "ERROR";
         return -1;
     }
     catch (...)
     {
-        cout << "ERROR";
         return -1;
     }
 }

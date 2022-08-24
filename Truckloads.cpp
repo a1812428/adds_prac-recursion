@@ -1,5 +1,5 @@
 #include "Truckloads.h"
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int Truckloads::numTrucks(int numcrates, int loadSize)
@@ -26,4 +26,19 @@ int Truckloads::numTrucks(int numcrates, int loadSize)
         cout << "ERROR";
         return -1;
     }
+}
+
+string Truckloads::numTrucks(string numcrates, int loadSize)
+{
+    return "ERROR";
+}
+
+string Truckloads::numTrucks(int numcrates, string loadSize)
+{
+    return "ERROR";
+}
+
+string Truckloads::numTrucks(string numcrates, string loadSize)
+{
+    return "ERROR";
 }
